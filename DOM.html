@@ -10,21 +10,20 @@
 <div  id="wrapper" class="wrapper">
     <button id="clickMe">点我</button>
     <div id="popover" class="popover">
-        <input type="checkbox">浮层</div>
+        <input type="checkbox">浮层
+    </div>
 </div>
 
 <script>
 $(clickMe).on('click',function () {
-    $(popover).show()
-    setTimeout(function () {
+    $(popover).toggle()
         $(document).one('click',function () {
+            console.log(1)
             $(popover).hide()
         })
-    },0)
-
 })
 
-$(popover).on('click',function (e) {
+$(wrapper).on('click',function (e) {
     e.stopPropagation()
 })
 
