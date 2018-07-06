@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="dom.css">
 </head>
 <body>
-<div class="wrapper">
+<div  id="wrapper" class="wrapper">
     <button id="clickMe">点我</button>
     <div id="popover" class="popover">
         <input type="checkbox">浮层</div>
@@ -21,13 +21,14 @@ $(clickMe).on('click',function () {
             $(popover).hide()
         })
     },0)
+
 })
 
 $(popover).on('click',function (e) {
     e.stopPropagation()
 })
 
-    
+
 
 </script>
 </body>
